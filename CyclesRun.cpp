@@ -1,3 +1,5 @@
+#include "CyclesRun.h"
+
 static uint64_t CyclesRun::mls = millis();
 
 CyclesRun::CyclesRun(const cycle _c[]){
