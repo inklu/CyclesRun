@@ -40,6 +40,8 @@ void setup() {
   cr.addCycle(2500,pi2500,3);
   cr.addCycle(4500,pi4500,1);
   cr.addCycle(5000);
+  
+  cr.start();
 }
 
 void loop() {
