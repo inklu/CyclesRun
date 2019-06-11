@@ -44,6 +44,8 @@ void setup() {
   cr.addCycle(2500);
   cr.addCycle(4500);
   cr.addCycle(5000);
+  
+  cr.start();
 }
 
 void loop() {

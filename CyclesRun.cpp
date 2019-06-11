@@ -60,15 +60,15 @@ void CyclesRun::run(unsigned long _mls){
   if(!_mls) mls=millis();
   else mls = _mls;
 
-  onEveryMls(mls); //invoke overloaded function each loop
+  if(isRun) onEveryMls(mls); //invoke overloaded function each loop
 
   for(byte i=0;i<cycleSize;i++){
     if((mls - cycles[i].mls)>cycles[i].cycleMls){
       cycles[i].mls = mls;
-      onEveryCycle(cycles[i].cycleMls,cycles[i].mls); //invoke overloaded function each cycle
+      if(isRun) onEveryCycle(cycles[i].cycleMls,cycles[i].mls); //invoke overloaded function each cycle
       if(cycles[i].funcs){
         for(byte j=0;j<cycles[i].cycleFuncSize;j++){
-          if(cycles[i].funcs[j]) cycles[i].funcs[j](); //invoke each function through initialization
+          if(cycles[i].funcs[j] && isRun) cycles[i].funcs[j](); //invoke each function through initialization
         }  
       }
     }
