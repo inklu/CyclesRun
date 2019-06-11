@@ -32,15 +32,14 @@ void setup() {
 
   //define array of functions to be invoked each cycle
   CyclesRun::pInvoke pi1000[]={f1,f2},
-                     pi2500[]={f2,f3},
-                     pi4500[]={f4},
-                     pi5000[]={};
-  
+                     pi2500[]={f2,f3,f4},
+                     pi4500[]={f4};
+
   //define cycles of invocations with array of functions
-  cr.addCycle(1000,pi1000);
-  cr.addCycle(2500,pi2500);
-  cr.addCycle(4500,pi4500);
-  cr.addCycle(5000,pi5000);
+  cr.addCycle(1000,pi1000,2);
+  cr.addCycle(2500,pi2500,3);
+  cr.addCycle(4500,pi4500,1);
+  cr.addCycle(5000);
 }
 
 void loop() {
