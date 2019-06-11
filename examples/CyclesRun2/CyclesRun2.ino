@@ -39,7 +39,7 @@ void setup() {
 
   //no definitions of the array of functions are needed
   
-  //define cycles of invocations with array of functions
+  //define cycles of invocations without array of functions
   cr.addCycle(1000);
   cr.addCycle(2500);
   cr.addCycle(4500);
