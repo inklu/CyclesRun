@@ -32,3 +32,5 @@ class CyclesRun{
     static uint64_t mls;
     bool isRun=false;
 };
+
+#endif
