@@ -1,0 +1,16 @@
+{
+  "name": "CyclesRun",
+  "keywords": "timer, void functions, oop",
+  "description": "The CyclesRun abstract class for periodically invoking void functions in Arduino sketches.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inklu/CyclesRun"
+  },
+  "version": "1.0.0",
+  "authors": {
+    "name": "Igor Klyushnyov",
+    "url": "https://github.com/inklu"
+  },
+  "frameworks": "arduino",
+  "platforms": "*"
+}
