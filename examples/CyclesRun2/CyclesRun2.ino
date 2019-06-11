@@ -2,24 +2,27 @@
 
 class MyCyclesRun:public CyclesRun{
   protected:
-    void onEveryMls(uint64_t mls=0);
-    void onEveryCycle(const uint16_t cycleMls, const uint64_t mls=0);
+    void onEveryMls(unsigned long mls=0);
+    void onEveryCycle(const uint16_t cycleMls, const unsigned long mls=0);
 };
 
-void MyCyclesRun::onEveryMls(uint64_t mls){
-  Serial.print("X");
+void MyCyclesRun::onEveryMls(unsigned long mls){
+  //Serial.print("X");
 }
 
-void MyCyclesRun::onEveryCycle(const uint16_t cycleMls, const uint64_t mls){
+void MyCyclesRun::onEveryCycle(const uint16_t cycleMls, const unsigned long mls){
   switch(cycleMls){
     case 1000:
-      Serial.println("1000");
+      Serial.print("1000 ");
+      Serial.println(mls);
       break;
     case 2500:
-      Serial.println("2500");
+      Serial.print("2500 ");
+      Serial.println(mls);
       break;
     case 4500:
-      Serial.println("4500");
+      Serial.print("4500 ");
+      Serial.println(mls);
       break;
     case 5000:
       //do something
