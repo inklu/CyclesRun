@@ -1,3 +1,12 @@
+#ifndef CYCLESRUN_H
+#define CYCLESRUN_H
+
+#if ARDUINO >= 100
+  #include <Arduino.h>
+#else
+  #include <WProgram.h>
+#endif
+
 //// CyclesRun
 class CyclesRun{
   public:
